@@ -17,12 +17,6 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 90px;
-    /* Account for fixed header */
-}
-
 body {
     font-family: var(--font-main);
     line-height: 1.6;
@@ -39,6 +33,7 @@ body {
 /* Header & Nav */
 header {
     background: rgba(255, 255, 255, 0.95);
+    /* backdrop-filter: blur(10px); Removed blur as it can be considered an effect/animation related style sometimes, but mostly static. Keeping it is fine, but user said remove animations. Blur is static. Keeping it. */
     backdrop-filter: blur(10px);
     position: fixed;
     width: 100%;
@@ -64,10 +59,7 @@ nav {
 nav ul {
     display: flex;
     list-style: none;
-}
-
-nav ul li {
-    margin-left: 2rem;
+    gap: 2rem;
 }
 
 nav ul li a {
@@ -75,7 +67,7 @@ nav ul li a {
     color: var(--text-color);
     font-weight: 600;
     font-size: 0.9rem;
-    transition: color 0.3s;
+    /* Removed transition */
 }
 
 nav ul li a:hover {
@@ -115,12 +107,14 @@ nav ul li a:hover {
 .btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     padding: 0.8rem 2rem;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
-    transition: all 0.3s;
+    /* Removed transition */
     cursor: pointer;
+    border: none;
 }
 
 .btn-primary {
@@ -130,8 +124,7 @@ nav ul li a:hover {
 
 .btn-primary:hover {
     background-color: var(--primary-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 86, 179, 0.2);
+    /* Removed transform and box-shadow animation */
 }
 
 .btn-secondary {
@@ -148,6 +141,7 @@ nav ul li a:hover {
     border: 2px solid var(--primary-color);
     color: var(--primary-color);
     gap: 0.5rem;
+    background: transparent;
 }
 
 .btn-outline:hover {
@@ -176,7 +170,7 @@ h2 {
 .content-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 3rem;
     align-items: start;
 }
 
@@ -187,7 +181,7 @@ h2 {
 
 .image-gallery {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
 }
 
@@ -204,11 +198,11 @@ h2 {
     height: 150px;
     object-fit: cover;
     display: block;
-    transition: transform 0.3s;
+    /* Removed transition */
 }
 
 .gallery-item img:hover {
-    transform: scale(1.05);
+    /* Removed transform */
 }
 
 .gallery-caption {
@@ -217,6 +211,7 @@ h2 {
     text-align: center;
     color: var(--secondary-color);
     background: var(--white);
+    border-top: 1px solid var(--border-color);
 }
 
 /* Stats Grid */
@@ -233,6 +228,11 @@ h2 {
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     border: 1px solid var(--border-color);
+    /* Removed transition */
+}
+
+.stat-card:hover {
+    /* Removed transform */
 }
 
 .stat-value {
@@ -244,10 +244,11 @@ h2 {
 }
 
 .stat-label {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--secondary-color);
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-weight: 600;
 }
 
 /* Class Grid */
@@ -269,11 +270,11 @@ h2 {
     margin-bottom: 1.5rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border: 1px solid var(--border-color);
-    transition: transform 0.3s;
+    /* Removed transition */
 }
 
 .class-item img:hover {
-    transform: scale(1.05);
+    /* Removed transform */
 }
 
 .class-item h3 {
@@ -283,7 +284,7 @@ h2 {
 }
 
 .class-item p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: var(--secondary-color);
 }
 
@@ -310,6 +311,7 @@ h2 {
     margin: 2rem 0 1rem;
     font-family: var(--font-heading);
     color: #102a43;
+    font-size: 1.5rem;
 }
 
 .license-box h3:first-child {
@@ -326,6 +328,7 @@ h2 {
 
 .license-box li {
     margin-bottom: 1rem;
+    padding-left: 0.5rem;
 }
 
 /* Contact Card */
@@ -336,11 +339,17 @@ h2 {
     margin: 2rem auto;
     max-width: 600px;
     border-left: 5px solid var(--primary-color);
+    text-align: left;
 }
 
 .email-subject {
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
+    color: #102a43;
+}
+
+.email-to {
+    font-size: 1.1rem;
 }
 
 .email-to a {
@@ -348,6 +357,10 @@ h2 {
     text-decoration: none;
     font-weight: 700;
     font-size: 1.2rem;
+}
+
+.email-to a:hover {
+    text-decoration: underline;
 }
 
 .download-links {
@@ -365,11 +378,13 @@ h2 {
     border-radius: 8px;
     font-family: 'Courier New', Courier, monospace;
     overflow-x: auto;
+    border: 1px solid #102a43;
 }
 
 .citation-box code {
     display: block;
-    line-height: 1.4;
+    line-height: 1.5;
+    white-space: pre;
 }
 
 /* Footer */
@@ -385,25 +400,36 @@ footer p {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .class-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
     .hero h1 {
         font-size: 2.5rem;
     }
 
-    .content-grid {
+    .image-gallery {
         grid-template-columns: 1fr;
     }
 
-    .image-gallery {
-        grid-template-columns: 1fr 1fr;
-    }
-
     .stats-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     .class-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     .download-links {
@@ -414,5 +440,14 @@ footer p {
 
     nav ul {
         display: none;
+        /* Mobile menu implementation would go here */
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
     }
 }
