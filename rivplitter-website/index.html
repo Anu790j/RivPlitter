@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RivPLitter: River Plastic Litter Dataset</title>
+    <meta name="description" content="RivPLitter: A comprehensive dataset for river plastic litter detection and monitoring.">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">RivPLitter</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#license">License</a></li>
+                <li><a href="#access">Access</a></li>
+                <li><a href="#citation">Citation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="container">
+                <h1>RivPLitter: River Plastic Litter Dataset</h1>
+                <p class="subtitle">A Comprehensive Dataset for River Plastic Litter Detection and Monitoring</p>
+                <div class="hero-actions">
+                    <a href="#access" class="btn btn-primary">Request Access</a>
+                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About the Dataset</h2>
+                <div class="content-grid">
+                    <div class="text-content">
+                        <p>The goal of our research is to advance the state of the art in river plastic litter detection. RivPLitter is a large-scale, high-resolution dataset specifically curated to facilitate the development and evaluation of object detection models in complex river environments.</p>
+                        <p>This dataset is made available (upon request) for the academic community to support research in environmental monitoring and plastic pollution mitigation.</p>
+                        <p>The dataset includes 88,860 images with high-resolution 4K imagery, covering various environmental conditions and object classes including plastic, debris, bottles, and bags.</p>
+                    </div>
+                    <div class="image-gallery">
+                        <div class="gallery-item">
+                            <img src="assets/india.png" alt="Study Location - India">
+                            <div class="gallery-caption">Study Location</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/map_of_river.png" alt="River Map">
+                            <div class="gallery-caption">River Map</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/env_blue.png" alt="Clear Water Environment">
+                            <div class="gallery-caption">Clear Water</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/env_brown.png" alt="Turbid Water Environment">
+                            <div class="gallery-caption">Turbid Water</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="stats" class="section bg-light">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-value">88,860</span>
+                        <span class="stat-label">Annotated Frames</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">4</span>
+                        <span class="stat-label">Object Classes</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">4K</span>
+                        <span class="stat-label">Resolution</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">24h+</span>
+                        <span class="stat-label">Video Coverage</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="classes" class="section">
+            <div class="container">
+                <h2>Object Classes</h2>
+                <p class="text-center mb-4">The dataset includes four primary categories of riverine litter, annotated with high-precision bounding boxes.</p>
+                <div class="class-grid">
+                    <div class="class-item">
+                        <img src="assets/plastic.png" alt="Plastic Fragment">
+                        <h3>Fragmented Plastic</h3>
+                        <p>Small pieces of plastic material, often irregular in shape.</p>
+                    </div>
+                    <div class="class-item">
+                        <img src="assets/bag.png" alt="Plastic Bag">
+                        <h3>Plastic Bags</h3>
+                        <p>Floating plastic bags of various colors and sizes.</p>
+                    </div>
+                    <div class="class-item">
+                        <img src="assets/bottle.png" alt="Plastic Bottle">
+                        <h3>Bottles</h3>
+                        <p>Plastic beverage bottles and containers.</p>
+                    </div>
+                    <div class="class-item">
+                        <img src="assets/organic.png" alt="Organic Debris">
+                        <h3>Organic Debris</h3>
+                        <p>Natural floating materials like leaves, twigs, and wood.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="license" class="section bg-light">
+            <div class="container">
+                <h2>License Agreement</h2>
+                <div class="license-box">
+                    <h3>Introduction</h3>
+                    <p>The primary goal of the RivPLitter research is to advance the state of the art in river plastic litter detection and quantification. Plastic pollution in rivers represents a critical environmental challenge, as freshwater systems serve as primary conduits for debris transport into seas and oceans. This dataset is made available (upon request) for the academic community.</p>
+                    
+                    <h3>Release of the dataset</h3>
+                    <p>To advance the state of the art in river plastic litter detection, the RivPLitter dataset is made available for the academic community. All requests must be submitted in writing by the head of the research group or supervisor on behalf of the student or individual researcher (henceforth, the “Researcher”). Requests must be directed to Ali Reza Alaei and Partha Prathim Roy and their decision regarding authorization to access the dataset is final. To receive a copy of the imagery, the authorized Researcher must sign this document and agree to observe the restrictions listed below. In addition to other possible remedies, failure to observe these restrictions may result in the revocation of permission to use the data and denial of access to the dataset. There will be no charge for the data made available.</p>
+
+                    <h3>Consent: Researcher agrees to the following restrictions:</h3>
+                    <ol>
+                        <li><strong>Redistribution:</strong> The RivPLitter dataset, in whole or in part, will not be further distributed, published, copied, or disseminated in any way or form whatsoever, whether for profit or not. This includes further distributing, copying, or disseminating to a different facility or organizational unit within the Researcher’s university, organization, or company.</li>
+                        <li><strong>Modification and commercial use:</strong> The RivPLitter dataset, in whole or in part, may not be modified or used for commercial purposes. The license granted herein is specifically for the research purposes of the Researcher, and Researcher shall not duplicate or use the disclosed RivPLitter dataset, its contents, or any images, videos and associated ground truth to manufacture, promote, or sell products or technologies (or portions thereof) either directly or indirectly for commercialization or any other direct for-profit purpose.</li>
+                        <li><strong>Requests for the dataset:</strong> All requests for RivPLitter dataset must be directed to Ali Reza Alaei and Partha Prathim Roy and upon receipt of a signed copy of this agreement, in case of the decision of granting access, he will deliver instructions for such access.</li>
+                        <li><strong>Publication requirements:</strong> Those seeking to include renderings of more than 20 images from the RivPLitter dataset in reports, papers, and other documents to be published or released must first obtain approval in writing from Ali Reza Alaei and Partha Prathim Roy.</li>
+                        <li><strong>Citation:</strong> All documents and papers that report on research that use the RivPLitter dataset must acknowledge the use of the dataset by including an appropriate citation.</li>
+                        <li><strong>Publications:</strong> A copy of all reports and papers that are for public or general release that use the RivPLitter dataset must be forwarded immediately upon release or publication to RivPLitter.</li>
+                        <li><strong>Indemnification:</strong> Researcher agrees to indemnify, defend, and hold harmless the Southern Cross University, IITR and Professor Ali Reza Alaei and Partha Prathim Roy, individually and collectively, from any and all losses, expenses, damages, demands and/or claims based upon any injury or damage (real or alleged) related to, and shall pay all damages, claims, judgments or expenses resulting from, Researcher’s use of the RivPLitter dataset.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section id="access" class="section">
+            <div class="container text-center">
+                <h2>How to Access</h2>
+                <p>To request access to the RivPLitter dataset, please download the license agreement form below, sign it, and send it to the following email address:</p>
+                
+                <div class="contact-card">
+                    <p class="email-subject">Subject: <strong>[RivPLitter v1.0] Signed License Agreement</strong></p>
+                    <p class="email-to">To: <a href="mailto:Ali.Alaei@scu.edu.au">Ali.Alaei@scu.edu.au</a></p>
+                </div>
+
+                <div class="download-links">
+                    <a href="assets/rivplitterlicense.pdf" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 16l-5-5h3V4h4v7h3l-5 5zm9-9h-6v2h4v10H5V9h4V7H3v14h18V7z"/></svg>
+                        Download PDF License
+                    </a>
+                    <a href="assets/rivplitterlicense.docx" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 16l-5-5h3V4h4v7h3l-5 5zm9-9h-6v2h4v10H5V9h4V7H3v14h18V7z"/></svg>
+                        Download DOCX License
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="citation" class="section bg-light">
+            <div class="container">
+                <h2>Citation</h2>
+                <p>If you use this dataset in your research, please cite the following paper:</p>
+                <div class="citation-box">
+                    <code>
+                        @article{rivplitter2024,<br>
+                        &nbsp;&nbsp;title={RivPLitter: A Comprehensive Dataset for River Plastic Litter Detection},<br>
+                        &nbsp;&nbsp;author={Alaei, Ali Reza and Roy, Partha Prathim and others},<br>
+                        &nbsp;&nbsp;journal={Elsevier},<br>
+                        &nbsp;&nbsp;year={2024}<br>
+                        }
+                    </code>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 RivPLitter Dataset Team. All rights reserved.</p>
+            <p>Southern Cross University & IIT Roorkee</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
