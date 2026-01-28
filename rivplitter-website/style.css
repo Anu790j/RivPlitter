@@ -17,12 +17,17 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+    /* Account for fixed header */
+}
+
 body {
     font-family: var(--font-main);
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--white);
-    scroll-behavior: smooth;
 }
 
 .container {
@@ -189,7 +194,7 @@ h2 {
 .gallery-item {
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border: 1px solid var(--border-color);
     background: var(--white);
 }
@@ -226,7 +231,7 @@ h2 {
     background: var(--white);
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     border: 1px solid var(--border-color);
 }
 
@@ -262,7 +267,7 @@ h2 {
     object-fit: cover;
     border-radius: 12px;
     margin-bottom: 1.5rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border: 1px solid var(--border-color);
     transition: transform 0.3s;
 }
@@ -298,7 +303,7 @@ h2 {
     border: 1px solid var(--border-color);
     max-height: 600px;
     overflow-y: auto;
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .license-box h3 {
@@ -384,11 +389,11 @@ footer p {
     .hero h1 {
         font-size: 2.5rem;
     }
-    
+
     .content-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .image-gallery {
         grid-template-columns: 1fr 1fr;
     }
@@ -400,13 +405,13 @@ footer p {
     .class-grid {
         grid-template-columns: 1fr 1fr;
     }
-    
+
     .download-links {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
     }
-    
+
     nav ul {
         display: none;
     }
